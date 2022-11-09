@@ -14,4 +14,4 @@ function createApi (route: string) {
   })
 }
 
-export const api = (route: string = 'search') => createApi(route)
+export const api = (route: string = '/') => createApi(route)

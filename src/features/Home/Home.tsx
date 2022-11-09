@@ -1,11 +1,11 @@
 import TextField from '@mui/material/TextField'
 import { bodyStyle } from '../../styles/theme/BaseTheme'
 import { Box, Card } from '@mui/material'
-import { useFilms } from '../../services/features/Film/hooks/useFilms'
+import { useFilmsList } from '../../services/features/StreamingAvailability/hooks/useFilms'
 import Button from '@mui/material/Button'
 
 export const Home = () => {
-  const { filmInfo } = useFilms({
+  const { filmInfo } = useFilmsList({
     country: 'us',
     service: 'netflix',
     type: 'movie',
