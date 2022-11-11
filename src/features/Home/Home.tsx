@@ -1,8 +1,7 @@
-import TextField from '@mui/material/TextField'
 import { bodyStyle } from '../../styles/theme/BaseTheme'
-import { Box, Card } from '@mui/material'
 import { useFilmsList } from '../../services/features/StreamingAvailability/hooks/useFilms'
-import Button from '@mui/material/Button'
+import { SearchInputCard } from './SearchInputCard'
+import { SearchResults } from './SearchResults'
 
 export const Home = () => {
   const { filmInfo } = useFilmsList({
@@ -19,19 +18,8 @@ export const Home = () => {
   }
   return <>
         <div className={bodyStyle}>
-            <Box
-                component="form"
-                className='py-16 text-center'
-                noValidate
-                autoComplete="off"
-            >
-                <Card variant="outlined" className={'p-8 max-w-md mx-auto'}>
-                    <TextField className={'w-full'} label="Search Movie or Show" variant="outlined"/>
-                    <div className={'text-right pt-2'}>
-                        <Button variant="outlined">Search</Button>
-                    </div>
-                </Card>
-            </Box>
+            <SearchInputCard/>
+            <SearchResults/>
         </div>
     </>
 }

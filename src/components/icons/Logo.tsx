@@ -3,10 +3,12 @@ import { FC } from 'react'
 interface ILogoProps {
     width?: string;
     height?: string;
+    className?: string;
 }
 
-export const Logo: FC<ILogoProps> = ({ width = '40', height = '40' }) => (
-    <svg color={'#FFFFFF'} width={width} height={height} version="1.1" xmlns="http://www.w3.org/2000/svg"
+export const Logo: FC<ILogoProps> = ({ className, width = '40', height = '40' }) => (
+    <svg className={className} color={'#FFFFFF'} width={width} height={height} version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
          xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 1000 1000" enableBackground="new 0 0 1000 1000" xmlSpace="preserve">
         <g>

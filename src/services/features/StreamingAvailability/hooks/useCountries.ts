@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import CountryService from '../CountryService'
 
-export const useCountries = (params: any, isEnabled: boolean = false) => {
+export const useCountries = (isEnabled: boolean = false) => {
   const { data, isFetching } = useQuery(
-    ['films', params],
+    ['films'],
     async () => {
       const countryService = new CountryService()
       const film = await countryService.getCountries()

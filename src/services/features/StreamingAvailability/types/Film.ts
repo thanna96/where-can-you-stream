@@ -64,6 +64,7 @@ export type getFilmsListParamType = {
 }
 
 export type getFilmDetailsType = {
+    country: string,
     output_language: string,
     tmdb_id: string,
 }
